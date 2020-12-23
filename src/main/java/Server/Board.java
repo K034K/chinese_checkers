@@ -1,7 +1,7 @@
 package Server;
 
 public class Board {
-    public class Field {
+    public static class Field {
         Boolean access = false;
         String color;
     }
@@ -13,7 +13,7 @@ public class Board {
     };
 
 /*initializing board for players(saying where you can go and where can't)*/
-    public void initBoard() {
+    protected void initBoard() {
         int start = 8;
         int counter = 1;
         for (int i = 0; i < Fields.length; i++) {
@@ -34,7 +34,7 @@ public class Board {
         initBoardPlayers();
     }
 /*Initializing corners of board for functionality*/
-    public void initBoardPlayers() {
+    protected void initBoardPlayers() {
         int start = 0;
         int width = 4;
         for (int i = 4; i < 9; i++) {
