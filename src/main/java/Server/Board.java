@@ -12,7 +12,7 @@ public class Board {
         initBoard();
     };
 
-
+/*initializing board for players(saying where you can go and where can't)*/
     public void initBoard() {
         int start = 8;
         int counter = 1;
