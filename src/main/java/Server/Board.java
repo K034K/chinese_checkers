@@ -1,19 +1,15 @@
 package Server;
 
 public class Board {
-    public static class Field {
-        Boolean access = false;
-        String color;
-    }
 
     Field[][] Fields = new Field[17][17];
 
     Board(){
         initBoard();
     };
-
-/*initializing board for players(saying where you can go and where can't)*/
+    /*initializing board for players(saying where you can go and where can't)*/
     protected void initBoard() {
+
         int start = 8;
         int counter = 1;
         for (int i = 0; i < Fields.length; i++) {
@@ -51,7 +47,7 @@ public class Board {
             width++;
 
         }
-        start =13;
+        start = 13;
         width = 4;
         for (int i = 4; i < 9; i++) {
             for (int j = 0; j < width; j++) {

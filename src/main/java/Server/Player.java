@@ -1,32 +1,27 @@
 package Server;
-
-import Server.Server;
-import org.apache.maven.surefire.shade.org.apache.commons.lang3.tuple.Pair;
-
-import java.awt.*;
+import java.util.LinkedHashMap;
 import java.util.ArrayList;
-import java.util.List;
 
 public class Player {
 
     private String color;
+    private Field[][] Fields;
 
+    ArrayList<Player> players = new ArrayList<Player>();
 
-    Pair <Integer, Integer> ans = new Pair <Integer, Integer> ();
-
-    private Player(String color)
-    {
+    public Player(String color) {
         this.color = color;
+        if(!players.contains(color))
+        {
+            players.add(this);
+        }
     }
 
-    public String getColor()
-    {
-        return color;
-    }
+//  Field field = new Field(color,Fields);
 
-    public void doMove(String color,int x, int y)
+    public void doMove()
     {
-        if(usedFields.contains(x,y))
+
     }
 
 }
